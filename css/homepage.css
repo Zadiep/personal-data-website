@@ -1,0 +1,194 @@
+
+/*This is a comment in CSS*/
+
+body{
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+
+h1{
+    color:whitesmoke;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 80px;
+    
+}
+
+h3{
+    color:whitesmoke;
+    text-align: center;
+    font-size: 50px;
+}
+
+
+p{
+    font-size: 25px;
+}
+
+header{
+    padding:0 3%;
+}
+
+main{
+    width:100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 3%;
+
+}
+
+footerTitle{
+    margin-left: 60px;
+    width:100%;
+    min-height:100px;
+    color: aliceblue;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 100px;
+}
+
+footer{
+    margin-left: 60px;
+    width:100%;
+    min-height:100px;
+    color: aliceblue;
+    font-size: 30px;
+    
+}
+
+
+
+
+/* Flex layouts are one of the easier ways to style responsive layouts that work on all devices */
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox */
+
+.flex-container{
+    display: flex; /* all children will now be flex items */
+    flex-direction: row; /* other option is column */
+    flex-wrap: wrap; /* means the children will wrap to a new line */
+}
+
+.flex-item{
+    display: flex;
+    /* the following three items can be put on one line: https://developer.mozilla.org/en-US/docs/Web/CSS/flex */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 25%; /*width of the box, take up a quarter of the parent's size*/
+    box-sizing: border-box; /*this means that we can add padding, line below, and still only take 25% width of parent*/
+    padding: 10px;
+}
+
+.flex-item a{
+    display: flex;
+    font-size: 20px;
+    width: 100%;
+    height: 0;
+    padding: 30% 0;
+    background-position: center;
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color:#000000;
+    transition: all 0.2s; /* CSS transitions https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
+}
+
+
+
+.flex-item a#day1{
+    background-image: url(../assets/images/day1.jpg); 
+}
+
+.flex-item a#day2{
+    background-image: url(../assets/images/day2.jpg); 
+}
+
+.flex-item a#day3{
+    background-image: url(../assets/images/day3.jpg); 
+}
+
+.flex-item a#day4{
+    background-image: url(../assets/images/day4.jpg); 
+}
+
+.flex-item a#day5{
+    background-image: url(../assets/images/day5.jpg); 
+}
+.flex-item a#day6{
+    background-image: url(../assets/images/day6.jpg); 
+}
+.flex-item a#day7{
+    background-image: url(../assets/images/day7.jpg); 
+}
+.flex-item a#day8{
+    background-image: url(../assets/images/day8.jpg); 
+}
+.flex-item a#day9{
+    background-image: url(../assets/images/day9.jpg); 
+}
+
+/* want a different background image for each project? */
+/* try give each a tag a unique id in your HTML and then set different background images here*/
+/* EXAMPLE CSS: won't work if you just un-comment this:*/
+/* .flex-item a#my-special-id{
+    background-image: url(../assets/images/custom-image-name.jpeg); 
+} */
+
+
+.flex-item a:hover{
+    color:#bbbbbb;
+    background-size: 120%;
+}
+
+.flex-item h4{
+   margin:10px;
+   background-color: white;
+   padding:5px 10px;
+}
+
+
+/* Media Queries for responsive design */
+
+/* Un-comment the body background-colors to see bold debug color change between screen sizes */
+
+/* Extra large */
+@media screen  {
+    body {
+      background-color: rgb(0, 0, 0);
+    }
+
+    .flex-item{
+        flex-basis: 33.33%; /*width of the box, take up a quarter of the parent's size*/
+    }
+}
+
+/* Large */
+@media screen and (max-width: 992px) {
+    body {
+      background-color: #000000;
+    }
+
+}
+
+/* Medium */
+@media screen and (max-width: 768px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .flex-item{
+        flex-basis: 50%; /*width of the box, take up a quarter of the parent's size*/
+    }
+}
+
+/* Small */
+@media screen and (max-width: 576px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    .flex-item{
+        flex-basis: 100%; /*width of the box, take up a quarter of the parent's size*/
+    }
+}

@@ -1,0 +1,191 @@
+                                   /* ------------box------------- */
+/* * { box-sizing: border-box; } */
+
+ 
+.cube__face--front  { transform: rotateY(  0deg) translateZ(50px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(50px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(50px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(50px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(50px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+/* label { margin-right: 10px; } */
+
+
+<!-- /*----------------------------------the home cube----------------------------------*/ -->
+
+.scene {
+    width: 100px;
+    height: 100px;
+    /* border: 5px solid #CCC; */
+    position: absolute;
+    margin-top:100px;
+    margin-left:100px;
+    perspective: 1100px; 
+  }
+  
+  .cube {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: translateZ(100px); */
+    transition: transform 1s;
+    
+
+    animation-name:cube;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    z-index:3;
+  }
+
+  .cube__face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgba(0, 255, 106, 0.762);
+  }
+
+
+  @keyframes cube{
+   
+
+    from{
+      transform:rotate3d(100,100,100,0deg);
+    }
+    
+    to {
+      transform:rotate3d(100,100,100,-360deg);
+    }
+  }
+ 
+
+  <!-- /*----------------------------------the campus cube----------------------------------*/ -->
+  .scene2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top:1000px;
+    margin-left:100px;
+    perspective: 1100px; 
+  }
+  
+  .cube2 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: translateZ(100px); */
+    transition: transform 1s;
+    
+    animation-name:cube2;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    z-index:3;
+  }
+
+  .cube__face2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(255, 254, 254);
+  }
+
+
+  @keyframes cube2{
+    from{
+      transform:rotate3d(100,100,100,0deg);
+    }
+    
+    to {
+      transform:rotate3d(100,100,100,360deg);
+    }
+  }
+ 
+  
+  <!-- /*----------------------------------the 3 cube----------------------------------*/ -->
+  .scene3 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+                              /* position of cube */
+    margin-top:100px;
+    margin-left:1000px;
+    perspective: 1100px; 
+  }
+  
+  .cube3 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: translateZ(100px); */
+    transition: transform 1s;
+    
+    animation-name:cube3;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    z-index:3;
+  }
+
+  .cube__face3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(250, 158, 158)
+  }
+
+
+  @keyframes cube3{
+    from{
+      transform:rotate3d(100,100,100,0deg);
+    }
+    
+    to {
+      transform:rotate3d(100,100,100,-360deg);
+    }
+  }
+
+
+  <!-- /*----------------------------------the 4 cube----------------------------------*/ -->
+  .scene4 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+                              /* position of cube */
+    margin-top:1000px;
+    margin-left:1000px;
+    perspective: 1100px; 
+  }
+  
+  .cube4 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: translateZ(100px); */
+    transition: transform 1s;
+    
+    animation-name:cube3;
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    z-index:3;
+  }
+
+  .cube__face4 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 2px solid rgb(113, 37, 255)
+  }
+
+
+  @keyframes cube4{
+    from{
+      transform:rotate3d(100,100,100,0deg);
+    }
+    
+    to {
+      transform:rotate3d(100,100,100,360deg);
+    }
+  }
